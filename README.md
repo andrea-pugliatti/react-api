@@ -4,9 +4,9 @@ E’ arrivato il momento di mettere insieme i concetti appresi creiamo una picco
 
 Usate uno di questi due endpoint, a piacimento:
 
-Lista di Attrici:   https://lanciweb.github.io/demo/api/actresses/
+Lista di Attrici: https://lanciweb.github.io/demo/api/actresses/
 
-Lista di Attori:  https://lanciweb.github.io/demo/api/actors/
+Lista di Attori: https://lanciweb.github.io/demo/api/actors/
 
 ### Milestone 1
 Al caricamento dell'applicazione, recuperiamo la lista degli attori e delle attrici dalle API e stampiamoli in console.
