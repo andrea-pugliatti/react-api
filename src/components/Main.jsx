@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Card from "./Card";
 
 export default function Main() {
 	const actorsEndpoint = "https://lanciweb.github.io/demo/api/actors/";
@@ -29,25 +30,7 @@ export default function Main() {
 				{actors.length > 0
 					? actors.map((actor) => (
 							<li key={actor.id}>
-								<div className="card">
-									<img src={actor.image} alt={actor.name} />
-									<div className="card-body">
-										<h3>{actor.name}</h3>
-										<div>{actor.birth_year}</div>
-										<div>
-											<span className="bold">Nationality: </span>
-											{actor.nationality}
-										</div>
-										<div>
-											<span className="bold">Biography: </span>
-											{actor.biography}
-										</div>
-										<div>
-											<span className="bold">Awards: </span>
-											{actor.awards.join(", ")}
-										</div>
-									</div>
-								</div>
+								<Card actor={actor} />
 							</li>
 						))
 					: ""}
