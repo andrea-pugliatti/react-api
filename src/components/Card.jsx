@@ -1,8 +1,14 @@
+import TomHardyImage from "../assets/tom_hardy.jpg";
+
 export default function Card({ actor }) {
 	return (
 		<div className="card">
 			<div className="card-image">
-				<img src={actor.image} alt={actor.name} />
+				{actor.name === "Tom Hardy" ? (
+					<img src={TomHardyImage} alt={actor.name} />
+				) : (
+					<img src={actor.image} alt={actor.name} />
+				)}
 			</div>
 			<div className="card-body">
 				<h3>{actor.name}</h3>
