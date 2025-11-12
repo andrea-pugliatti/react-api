@@ -17,7 +17,6 @@ header {
 }
 
 img {
-	max-width: 100%;
 }
 
 .container {
@@ -34,15 +33,20 @@ img {
 }
 
 .card {
-	display: flex;
 	border: 1px solid black;
 	flex-grow: 0;
 	flex-shrink: 1;
-	min-height: 200px;
+	min-height: 435px;
 	width: 350px;
 	img {
 		height: 200px;
+		margin: 0 auto;
+		display: block;
 	}
+}
+
+.card-image {
+	background-color: darkgray;
 }
 
 .card-body {

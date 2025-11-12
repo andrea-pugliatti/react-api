@@ -1,7 +1,9 @@
 export default function Card({ actor }) {
 	return (
 		<div className="card">
-			<img src={actor.image} alt={actor.name} />
+			<div className="card-image">
+				<img src={actor.image} alt={actor.name} />
+			</div>
 			<div className="card-body">
 				<h3>{actor.name}</h3>
 				<div>{actor.birth_year}</div>

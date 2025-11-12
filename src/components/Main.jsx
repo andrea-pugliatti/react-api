@@ -22,7 +22,10 @@ export default function Main() {
 
 	useEffect(fetchActors, []);
 
-	useEffect(() => console.log(actors, actresses), [actors, actresses]);
+	useEffect(
+		() => console.log("On change of actors and actresses", actors, actresses),
+		[actors, actresses],
+	);
 
 	return (
 		<div className="container">
