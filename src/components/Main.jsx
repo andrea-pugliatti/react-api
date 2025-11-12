@@ -7,6 +7,7 @@ export default function Main() {
 
 	const [actors, setActors] = useState([]);
 	const [actresses, setActresses] = useState([]);
+	const [list, setList] = useState([]);
 
 	function fetchActors() {
 		fetch(actorsEndpoint)
@@ -22,27 +23,22 @@ export default function Main() {
 
 	useEffect(fetchActors, []);
 
-	useEffect(
-		() => console.log("On change of actors and actresses", actors, actresses),
-		[actors, actresses],
-	);
+	useEffect(() => {
+		console.log("On change of actors and actresses", actors, actresses);
+		actresses.map((actress) => {
+			actress.id += 100;
+			return actress;
+		});
+		setList([...actors, ...actresses]);
+	}, [actors, actresses]);
 
 	return (
 		<div className="container">
 			<ul className="actors-list">
-				{actors.length > 0
-					? actors.map((actor) => (
+				{list.length > 0
+					? list.map((actor) => (
 							<li key={actor.id}>
-								<Card actor={actor} gender={"m"} />
-							</li>
-						))
-					: ""}
-			</ul>
-			<ul className="actors-list">
-				{actresses.length > 0
-					? actresses.map((actress) => (
-							<li key={actress.id}>
-								<Card actor={actress} gender={"f"} />
+								<Card actor={actor} />
 							</li>
 						))
 					: ""}
