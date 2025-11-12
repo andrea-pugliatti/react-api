@@ -33,7 +33,16 @@ export default function Main() {
 				{actors.length > 0
 					? actors.map((actor) => (
 							<li key={actor.id}>
-								<Card actor={actor} />
+								<Card actor={actor} gender={"m"} />
+							</li>
+						))
+					: ""}
+			</ul>
+			<ul className="actors-list">
+				{actresses.length > 0
+					? actresses.map((actress) => (
+							<li key={actress.id}>
+								<Card actor={actress} gender={"f"} />
 							</li>
 						))
 					: ""}

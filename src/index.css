@@ -17,6 +17,7 @@ header {
 }
 
 img {
+	max-width: 100%;
 }
 
 .container {
@@ -34,8 +35,6 @@ img {
 
 .card {
 	border: 1px solid black;
-	flex-grow: 0;
-	flex-shrink: 1;
 	min-height: 435px;
 	width: 350px;
 	img {

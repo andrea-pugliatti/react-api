@@ -1,4 +1,4 @@
-export default function Card({ actor }) {
+export default function Card({ actor, gender }) {
 	return (
 		<div className="card">
 			<div className="card-image">
@@ -17,7 +17,7 @@ export default function Card({ actor }) {
 				</div>
 				<div>
 					<span className="bold">Awards: </span>
-					{actor.awards.join(", ")}
+					{gender === "m" ? actor.awards.join(", ") : actor.awards}
 				</div>
 			</div>
 		</div>
