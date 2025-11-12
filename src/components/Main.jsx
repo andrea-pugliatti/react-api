@@ -35,13 +35,11 @@ export default function Main() {
 	return (
 		<div className="container">
 			<ul className="actors-list">
-				{list.length > 0
-					? list.map((actor) => (
-							<li key={actor.id}>
-								<Card actor={actor} />
-							</li>
-						))
-					: ""}
+				{list.map((actor) => (
+					<li key={actor.id}>
+						<Card actor={actor} />
+					</li>
+				))}
 			</ul>
 		</div>
 	);

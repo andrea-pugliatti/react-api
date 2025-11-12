@@ -35,7 +35,7 @@ img {
 
 .card {
 	border: 1px solid black;
-	min-height: 435px;
+	min-height: 560px;
 	width: 350px;
 	img {
 		height: 200px;
