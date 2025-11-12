@@ -24,7 +24,7 @@ export default function Main() {
 	useEffect(fetchActors, []);
 
 	useEffect(() => {
-		console.log("On change of actors and actresses", actors, actresses);
+		// console.log("On change of actors and actresses", actors, actresses);
 		actresses.map((actress) => {
 			actress.id += 100;
 			return actress;
