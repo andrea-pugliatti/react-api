@@ -19,16 +19,16 @@ export default function Card({ actor }) {
 					<span className="bold">Awards: </span>
 					{actor.id > 100 ? actor.awards : actor.awards.join(", ")}
 				</div>
-				{actor.id > 100 ? (
-					<ul className="most-famous-movies">
-						<span className="bold">Most Famous Movies: </span>
-						{actor.most_famous_movies.map((item, index) => (
-							<li key={`${actor.name}-${index}`}>{item}</li>
-						))}
-					</ul>
-				) : (
-					""
-				)}
+				<ul className="most-famous-movies">
+					<span className="bold">Most Famous Movies: </span>
+					{actor.id > 100
+						? actor.most_famous_movies.map((item, index) => (
+								<li key={`${actor.name}-${index}`}>{item}</li>
+							))
+						: actor.known_for.map((item, index) => (
+								<li key={`${actor.name}-${index}`}>{item}</li>
+							))}
+				</ul>
 			</div>
 		</div>
 	);
